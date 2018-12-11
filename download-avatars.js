@@ -37,6 +37,6 @@ getRepoContributors(repoOwner, repoName, function(err, results) {
     console.log(url);
     var filePath = "./avatars/" + currentValue.login + ".jpg";
     console.log(filePath);
-    // downloadImageByURL(url, filePath);
+    downloadImageByURL(url, filePath);
   });
 });
