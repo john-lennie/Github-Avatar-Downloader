@@ -1,7 +1,7 @@
 {
   "name": "Github-Avatar-Downloader",
   "version": "1.0.0",
-  "description": "A command line node app that uses HTTp to download avatars from Github using their API",
+  "description": "A command line node app that uses HTTP to download avatars from Github using their API",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
