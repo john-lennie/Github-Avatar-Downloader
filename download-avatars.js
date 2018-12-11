@@ -1,6 +1,6 @@
 var request = require('request');
 var fs = require('fs');
-var token = require('./secrets');
+var dotenv = require('dotenv').config();
 
 var repoOwner = process.argv[2],
     repoName = process.argv[3];
@@ -17,7 +17,7 @@ function getRepoContributors(owner, name, cb) {
     url: "https://api.github.com/repos/" + owner + "/" + name + "/contributors",
     headers: {
       'User-Agent': 'john-lennie',
-      'Authorization': token.GITHUB_TOKEN
+      'Authorization': process.env.GITHUB_TOKEN
     }
   };
   request(options, function(err, res, body) {
@@ -34,9 +34,7 @@ getRepoContributors(repoOwner, repoName, function(err, results) {
   var resultsInJson = JSON.parse(results); // array of contributors
   resultsInJson.forEach(function(currentValue) {
     var url = currentValue.avatar_url;
-    console.log(url);
     var filePath = "./avatars/" + currentValue.login + ".jpg";
-    console.log(filePath);
     downloadImageByURL(url, filePath);
   });
 });
