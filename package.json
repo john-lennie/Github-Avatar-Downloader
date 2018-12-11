@@ -1,0 +1,23 @@
+{
+  "name": "Github-Avatar-Downloader",
+  "version": "1.0.0",
+  "description": "A command line node app that uses HTTp to download avatars from Github using their API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/john-lennie/Github-Avatar-Downloader.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/john-lennie/Github-Avatar-Downloader/issues"
+  },
+  "homepage": "https://github.com/john-lennie/Github-Avatar-Downloader#readme",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
+}
